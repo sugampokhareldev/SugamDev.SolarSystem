@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
+  width: 100%;
   background: radial-gradient(circle at bottom, #1C2837 0%, #050608 100%);
   display: flex;
   justify-content: center;
