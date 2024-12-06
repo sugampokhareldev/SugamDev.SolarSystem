@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: radial-gradient(circle at bottom, #1C2837 0%, #050608 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.credit {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Arial, sans-serif;
+}
+
+/* Centering the entire system */
+.solar-system {
+  position: relative;
+  width: 200px; /* Match the size of the largest orbit */
+  height: 200px;
+}
+
+/* Orbit */
+.orbit-1, .orbit-2, .orbit-3, .orbit-4, .orbit-5, .orbit-6, .orbit-7, .orbit-8 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Thinner and transparent border */
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.6); /* Optional shadow */
+}
+
+.orbit-1 {
+  position: absolute;
+  transform: translate(0, 0) scale(0.5);
+  animation: orbit-mercury 5s linear infinite;
+}
+
+.orbit-2 {
+  position: absolute;
+  transform: translate(0, 0) scale(1);
+  animation: orbit-venus 7s linear infinite;
+}
+
+.orbit-3 {
+  position: absolute;
+  transform: translate(0, 0) scale(1.5);
+  animation: orbit-earth 10s linear infinite;
+}
+
+.orbit-4 { /* Add this rule */
+  position: absolute;
+  transform: translate(0, 0) scale(2);
+  animation: orbit-mars 12s linear infinite;
+}
+
+.orbit-5 {
+  transform: translate(0, 0) scale(2.5);
+  animation: orbit-jupiter 15s linear infinite;
+}
+
+.orbit-6 {
+  transform: translate(0, 0) scale(3.2);
+  animation: orbit-saturn 18s linear infinite;
+}
+
+.orbit-7 {
+  transform: translate(0, 0) scale(3.8);
+  animation: orbit-uranus 22s linear infinite;
+}
+
+.orbit-8 {
+  transform: translate(0, 0) scale(4.6);
+  animation: orbit-neptune 25s linear infinite;
+}
+
+/* Sun */
+.sun {
+  position: absolute;
+  top: 50%; /* Center the sun vertically */
+  left: 51%; /* Center the sun horizontally */
+  transform: translate(-50%, -50%); /* Adjust for the sun's own dimensions */
+  width: 80px;
+  height: 80px;
+  background-color: yellow; /* Add a placeholder color */
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 223, 0, 0.8); /* Add a glowing effect */
+}
+
+.Mercury {
+  transform: translate(-8px, -350px) scale(.04);
+} 
+
+.Venus {
+  transform: translate(-8px, -350px) scale(.05);
+}
+
+.Earth {
+  transform: translate(-8px, -360px) scale(.05);
+}
+
+.Mars {
+  transform: translate(-8px, -350px) scale(.03);
+}
+
+.Jupiter {
+  transform: translate(-8px, -360px) scale(.03);
+}
+
+.Saturn {
+  transform: translate(-8px, -750px) scale(1.5%);
+}
+
+.Uranus {
+  transform: translate(-8px, -602px) scale(1.3%);
+}
+
+.Neptune {
+  transform: translate(-8px, -355px) scale(1.5%);
+}
+
+.guide {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.guide p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.guide strong {
+  color: #FFD700; /* Highlight the shortcut text */
+}
+
+/* KeyFrames */
+@keyframes orbit-mercury {
+  0% { transform: rotate(0deg) scale(.6); }
+  100% { transform: rotate(360deg) scale(.6); }
+}
+
+@keyframes orbit-venus {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes orbit-earth {
+  0% { transform: rotate(0deg) scale(1.5); }
+  100% { transform: rotate(360deg) scale(1.5); }
+}
+
+@keyframes orbit-mars {
+  0% { transform: rotate(0deg) scale(2); }
+  100% { transform: rotate(360deg) scale(2); }
+}
+
+@keyframes orbit-jupiter {
+  0% { transform: rotate(0deg) scale(2.5); }
+  100% { transform: rotate(360deg) scale(2.5); }
+}
+
+@keyframes orbit-saturn {
+  0% { transform: rotate(0deg) scale(3.2); }
+  100% { transform: rotate(360deg) scale(3.2); }
+}
+
+@keyframes orbit-uranus {
+  0% { transform: rotate(0deg) scale(3.8); }
+  100% { transform: rotate(360deg) scale(3.8); }
+}
+
+@keyframes orbit-neptune {
+  0% { transform: rotate(0deg) scale(4.6); }
+  100% { transform: rotate(360deg) scale(4.6); }
+}
+
+
+/* Media query for 375x667 devices */
+/* Media query for 375x667 devices */
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .solar-system {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Adjust for screen size */
+    position: relative;
+  }
+
+  .orbit-1, .orbit-2, .orbit-3, .orbit-4, .orbit-5, .orbit-6, .orbit-7, .orbit-8 {
+    width: 80%; /* Dynamically scale down orbits */
+    height: 80%;
+  }
+
+  .sun {
+    width: 40px;
+    height: 40px;
+  }
+
+  .Mercury, .Venus, .Earth, .Mars, .Jupiter, .Saturn, .Uranus, .Neptune {
+    transform: translate(-5px, -5px) scale(0.8); /* Scale planets */
+  }
+
+  .guide, .credit {
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .guide {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  .credit {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+}
