@@ -206,18 +206,22 @@ body {
     margin: 0;
     height: 100vh;
     overflow: hidden;
+    padding: 0; /* Ensure no extra padding */
+    box-sizing: border-box;
   }
 
   .solar-system {
-    width: 100%;
+    width: 90%; /* Adjust for screen size */
     height: auto;
-    max-width: 300px; /* Adjust for screen size */
+    max-width: 300px; /* Limit the max width */
     position: relative;
   }
 
   .orbit-1, .orbit-2, .orbit-3, .orbit-4, .orbit-5, .orbit-6, .orbit-7, .orbit-8 {
-    width: 80%; /* Dynamically scale down orbits */
-    height: 80%;
+    width: 100%; /* Scale orbits to fit container */
+    height: 100%;
+    max-width: 90%; /* Avoid overly large orbits */
+    max-height: 90%;
   }
 
   .sun {
@@ -226,24 +230,35 @@ body {
   }
 
   .Mercury, .Venus, .Earth, .Mars, .Jupiter, .Saturn, .Uranus, .Neptune {
-    transform: translate(-5px, -5px) scale(0.8); /* Scale planets */
+    transform: translate(-50%, -50%) scale(0.7); /* Adjust scaling */
   }
 
   .guide, .credit {
     font-size: 12px;
     padding: 10px;
     text-align: center;
+    word-wrap: break-word; /* Break long text */
+    max-width: 90%; /* Prevent text from overflowing */
+    line-height: 1.4; /* Improve text readability */
   }
 
   .guide {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    max-width: 90%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
   }
 
   .credit {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    max-width: 90%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
   }
 }
