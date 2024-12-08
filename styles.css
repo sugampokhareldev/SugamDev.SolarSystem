@@ -44,45 +44,45 @@ body {
 .orbit-1 {
   position: absolute;
   transform: translate(0, 0) scale(0.5);
-  animation: orbit-mercury 5s linear infinite;
+  animation: orbit-mercury 7603200s linear infinite;
 }
 
 .orbit-2 {
   position: absolute;
   transform: translate(0, 0) scale(1);
-  animation: orbit-venus 7s linear infinite;
+  animation: orbit-venus 19440000s linear infinite;
 }
 
 .orbit-3 {
   position: absolute;
   transform: translate(0, 0) scale(1.5);
-  animation: orbit-earth 10s linear infinite;
+  animation: orbit-earth 31536000s linear infinite;
 }
 
 .orbit-4 { /* Add this rule */
   position: absolute;
   transform: translate(0, 0) scale(2);
-  animation: orbit-mars 12s linear infinite;
+  animation: orbit-mars 59356800s linear infinite;
 }
 
 .orbit-5 {
   transform: translate(0, 0) scale(2.5);
-  animation: orbit-jupiter 15s linear infinite;
+  animation: orbit-jupiter 374371200s linear infinite;
 }
 
 .orbit-6 {
   transform: translate(0, 0) scale(3.2);
-  animation: orbit-saturn 18s linear infinite;
+  animation: orbit-saturn 929577600s linear infinite;
 }
 
 .orbit-7 {
   transform: translate(0, 0) scale(3.8);
-  animation: orbit-uranus 22s linear infinite;
+  animation: orbit-uranus 2651356800s linear infinite;
 }
 
 .orbit-8 {
   transform: translate(0, 0) scale(4.6);
-  animation: orbit-neptune 25s linear infinite;
+  animation: orbit-neptune 5200416000s linear infinite;
 }
 
 /* Sun */
